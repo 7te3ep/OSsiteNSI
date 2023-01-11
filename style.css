@@ -1,0 +1,322 @@
+/*===================================*/
+/* BASE */
+/*===================================*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  animation: appear 0.5s  ease-in;
+  animation-fill-mode: forwards;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgrey;
+    color: #333333;
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+/*===================================*/
+/* NAV */
+/*===================================*/
+nav {
+  z-index: 100;
+  width: 100vw;
+  height: 30px;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0px 50px;
+  box-shadow: 0px 5px 5px grey;
+  margin-bottom: 10px;
+  background-color:white ;
+  color: #111;
+  animation: navAppear 0.6s   ease-in;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  transition: height 1s ease-in;
+}
+
+nav > #title  {
+  width: fit-content;
+  height: 100%;
+
+
+}
+
+nav > #title >a  {
+  color: #333;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+
+nav>#links {
+  width: fit-content;
+  height: 100%;
+}
+
+nav>#links>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  font-size: 20px;
+  height: 100%;
+  color: #333;
+  font-weight:bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in;
+}
+
+nav>#links>a:hover {
+background-color: #4caf4f86;
+}
+
+#focus {
+  background-color: #4CAF50;
+}
+/*===================================*/
+/* MAIN*/
+/*===================================*/
+
+main {
+  padding: 50px 50px;
+}
+
+/*===================================*/
+/* FIRST PAGE CARDS */
+/*===================================*/
+
+main > header {
+  font-size: 25px;
+  text-indent: 50px;
+}
+
+main > header> h1 {
+  padding: 30px 0px;
+  box-sizing: content-box;
+}
+main > header> h1 > span {
+  position: relative;
+
+}
+main > header> h1 > span:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0%;
+  height: 150%;
+  z-index: -1; /* Place the pseudo element right under the content */
+  bottom: 5px;
+  left: 0;
+  background: linear-gradient(to top, yellow 50%, transparent 50%);
+  animation-name: highlight;
+  animation-delay: 1.5s;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+}
+
+@keyframes highlight {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+
+}
+
+main > .OScard {
+  position: relative;
+  height: fit-content;
+  width: 70vw;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px 0px;
+  transition:box-shadow  0.5s ease,transform 0.5s ease-in;
+}
+main > .OScard:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0,0.8);
+  transform: scale(1.04);
+}
+
+
+main > .OScard > p {
+  font-size: 22px;
+}
+
+main > .OScard > header {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 30px;
+}
+
+main > .OScard > header > p {
+  font-size: 18px;
+  padding-right: 30px;
+  font-style: italic;
+  padding: 10px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0,0.5);
+}
+
+
+main > .OScard > header > div  {
+  display: flex;
+  align-items: center;
+}
+main > .OScard > header > div > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-right:20px;
+  box-shadow: 0px 0px 10px black;
+}
+
+main > .OScard > header > div > p {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+main > .OScard > h2 {
+  padding-bottom: 10px;
+}
+
+/*===================================*/
+/* SECOND PAGE  TABLE*/
+/*===================================*/
+main > h1 {
+  margin-bottom: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 10px solid #4CAF50;
+  background-color: #4caf4f3b;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  transition: transform 1s ease;
+  transform: scale(0.9);
+}
+
+table:hover {
+  transform: scale(1);
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tier-list {
+  margin-bottom: 30px;
+  width: 38vw;
+  margin-left: 2vw;
+  margin-right:10vw ;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.tier-list ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tier-list li {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tier-s li {
+  background-color: #F44336; /* red */
+  color: white;
+}
+
+.tier-a li {
+  background-color: #4CAF50; /* green */
+  color: white;
+}
+
+.tier-b li {
+  background-color: #2196F3; /* blue */
+  color: white;
+}
+
+.tier-c li {
+  background-color: #FF9800; /* orange */
+  color: white;
+}
+ol {
+transition: transform 0.5s ease;
+transform: translate(-20px,0px);
+}
+
+ol:hover {
+transform: translate(30px,0px) ;
+}
+
+@keyframes appear {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+@keyframes navAppear {
+  0%   {height: 30px;}
+  100% {height: 70px;
+  top: 0px;}
+}
