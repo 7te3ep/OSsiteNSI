@@ -97,11 +97,11 @@ nav>#links>a {
 }
 
 nav>#links>a:hover {
-background-color: #4caf4f86;
+background-color: #5aa3b286;
 }
 
 #focus {
-  background-color: #4CAF50;
+  background-color: #93a8d8;
 }
 /*===================================*/
 /* MAIN*/
@@ -123,6 +123,7 @@ main > header {
 main > header> h1 {
   padding: 30px 0px;
   box-sizing: content-box;
+  margin-bottom: 20px;
 }
 main > header> h1 > span {
   position: relative;
@@ -224,7 +225,7 @@ main > .OScard > h2 {
 /* SECOND PAGE  TABLE*/
 /*===================================*/
 main > h1 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 table {
   border-collapse: collapse;
@@ -310,6 +311,76 @@ ol:hover {
 transform: translate(30px,0px) ;
 }
 
+
+/*===================================*/
+/* THIRD PAGE */
+/*===================================*/
+main> #content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+main> #content > .comparCard {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 40vw;
+  height: fit-content;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0,0.5);
+}
+
+main> #content > .comparCard > header {
+  padding-bottom: 30px;
+  font-size: 25px;
+}
+
+main> #content > .comparCard > video {
+  width: 80%;
+  margin: 20px;
+}
+
+main> #content > .comparCard > p {
+  padding: 15px;
+  font-size: 25px;
+  width: 80%;
+}
+
+main> #content >#left {
+  display: flex;
+}
+
+main> #content >#right {
+  display: flex;
+}
+
+/*===================================*/
+/* SITOGRAPHIE*/
+/*===================================*/
+
+main > p {
+  font-size: 35px;
+  font-weight: bolder;
+  padding: 50px 50px;
+}
+ul {
+  margin-left: 30px;
+  padding-left: 50px;
+}
+ul > li {
+  padding: 20px;
+  font-size: 30px;
+}
+
+ul > li > a {
+  color: #042138;
+}
+
+/*===================================*/
+/* ANIMATION*/
+/*===================================*/
 @keyframes appear {
   0%   {opacity: 0%;}
   100% {opacity: 100%;}
