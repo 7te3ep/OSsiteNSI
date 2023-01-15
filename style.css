@@ -1,6 +1,9 @@
 /*===================================*/
 /* BASE */
 /*===================================*/
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0px;
@@ -101,7 +104,7 @@ background-color: #5aa3b286;
 }
 
 #focus {
-  background-color: #93a8d8;
+  background-color: #2196F3;
 }
 /*===================================*/
 /* MAIN*/
@@ -134,11 +137,11 @@ main > header> h1 > span:after {
   display: inline-block;
   position: absolute;
   width: 0%;
-  height: 150%;
+  height: 100%;
   z-index: -1; /* Place the pseudo element right under the content */
-  bottom: 5px;
+  bottom: 10px;
   left: 0;
-  background: linear-gradient(to top, yellow 50%, transparent 50%);
+  background: linear-gradient(to top, rgba(255, 255, 0,0.5) 50%, transparent 50%);
   animation-name: highlight;
   animation-delay: 1.5s;
   animation-duration: 0.75s;
@@ -365,13 +368,44 @@ main > p {
   font-weight: bolder;
   padding: 50px 50px;
 }
+
+main > #navList {
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+main > #navList > .goTo {
+  font-size: 25px;
+  padding: 17px 20px;
+  margin: 0px 15px;
+  border-radius: 30px;
+  background-color: rgba(147, 168, 216, 0.323);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0,0.7);
+  transition: transform 0.2s ease-in,box-shadow 0.2s ease-in,background-color 0.2s ease-in;
+}
+
+main > #navList > .goTo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.791);
+  background-color: #2196F3;
+}
+
+main > #navList > .goTo > a {
+  text-decoration: none;
+  color: #111;
+}
+
 ul {
   margin-left: 30px;
   padding-left: 50px;
 }
 ul > li {
-  padding: 20px;
-  font-size: 30px;
+  padding: 45px 0px;
+  font-size: 33px;
 }
 
 ul > li > a {
